@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulaire de contact</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Créer ma carte</h1>
+
+    <form action="traitement.php" method="POST">
+
+        <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    placeholder="Ex : Alexis"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail :</label>
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="alexis@example.com"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="taille">Taille (cm) :</label>
+            <input
+                    type="number"
+                    id="taille"
+                    name="taille"
+                    min="50"
+                    max="250"
+                    placeholder="Ex : 180"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="age">Âge :</label>
+            <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="1"
+                    max="120"
+                    placeholder="Ex : 20"
+                    required
+            >
+        </div>
+
+        <button type="submit">Générer ma carte</button>
+        <a href="liste.php">Voir toutes les cartes</a>
+    </form>
+
+
+</div>
+
+</body>
+</html>
